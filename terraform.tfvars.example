@@ -1,0 +1,18 @@
+# Cloud stuff
+hcloud_token = ""
+ssh_key = ""
+
+# TM stuff
+admins = [
+    "111122223333"
+]
+maps = {
+    "a" = "https://example.org",
+}
+dedi_credentials = [
+    {
+        login = "foobar",
+        password = "barfoo",
+    },
+]
+room_password = "coolevent"
