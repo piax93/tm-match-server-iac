@@ -58,3 +58,7 @@ resource "hcloud_server" "server" {
     hcloud_server.database,
   ]
 }
+
+output "server_ips" {
+  value = [for _, s in hcloud_server.server : s.ipv4_address]
+}
