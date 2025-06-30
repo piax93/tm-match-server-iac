@@ -4,15 +4,16 @@ ssh_key = ""
 
 # TM stuff
 admins = [
-    "111122223333"
+    "7bnf59fPSt2KXtmS-io1uw"  # <-- TM login IDs
 ]
 maps = {
-    "a" = "https://example.org",
+    "shortname" = "https://core.trackmania.nadeo.live/maps/...",
 }
+room_password = "coolevent"
 dedi_credentials = [
+    # Get these from https://www.trackmania.com/player/dedicated-servers
     {
         login = "foobar",
         password = "barfoo",
     },
 ]
-room_password = "coolevent"
