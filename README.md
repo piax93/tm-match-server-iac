@@ -18,7 +18,3 @@ that could be recycled for many providers.
     * **NOTE**: remember to enable setting unlinking and turn off settings cache before doing any of that.
 * Once you are done running the competition, empty the `dedi_credentials` list in `terraform.tfvars`,
   and run `make apply` again to delete all servers.
-
-## TODO
-* Database backups, so server instances can be spinned up and down just for match days, and save $$$
-  without losing time recreating settings.

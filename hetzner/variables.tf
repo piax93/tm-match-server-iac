@@ -13,6 +13,11 @@ variable "dc_location" {
   description = "Datacenter where to provision resources"
   default     = "fsn1" # eu-central
 }
+variable "preserve_database" {
+  type        = bool
+  description = "Store Maniacontrol database into permanent volume"
+  default     = true
+}
 variable "ssh_key" {
   type        = string
   description = "Public SSH key allowed to access servers"
