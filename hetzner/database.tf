@@ -17,9 +17,10 @@ resource "random_password" "root_password" {
 resource "hcloud_volume" "database_storage" {
   count = length(var.dedi_credentials) > 0 || var.preserve_database ? 1 : 0
 
-  name   = "maniacontrol-mysql-data"
-  size   = 10
-  format = "ext4"
+  name     = "maniacontrol-mysql-data"
+  size     = 10
+  format   = "ext4"
+  location = var.dc_location
 }
 
 resource "hcloud_volume_attachment" "database_storage_attach" {
