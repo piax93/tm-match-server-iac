@@ -4,10 +4,11 @@ locals {
     creds.login => creds.password
   }
   server_types = {
-    2 = "cpx11",
-    3 = "cpx21",
-    4 = "cpx31",
-    8 = "cpx41",
+    1 = "cpx12",
+    2 = "cpx22",
+    3 = "cpx21", # this is US only
+    4 = "cpx32",
+    8 = "cpx42",
   }
 }
 
