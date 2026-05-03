@@ -6,12 +6,12 @@ variable "cpu_cores" {
 variable "os_image" {
   type        = string
   description = "Operating system image to use"
-  default     = "ubuntu-24.04"
+  default     = "Ubuntu 24.04 LTS x64"
 }
 variable "dc_location" {
   type        = string
   description = "Datacenter where to provision resources"
-  default     = "fsn1" # eu-central
+  default     = "lhr"
 }
 variable "preserve_database" {
   type        = bool
@@ -42,7 +42,7 @@ variable "room_password" {
   description = "Player password for servers"
   sensitive   = true
 }
-variable "hcloud_token" {
+variable "vultr_token" {
   type        = string
   description = "Authentication token for Hetzner"
   sensitive   = true

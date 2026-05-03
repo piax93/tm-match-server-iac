@@ -1,5 +1,5 @@
 resource "hcloud_network" "main_net" {
-  name     = "my-net"
+  name     = "main-tm-net"
   ip_range = "10.0.0.0/8"
 }
 
