@@ -4,7 +4,7 @@ Infra-as-code setup to easily launch Trackmania servers for tournaments.
 
 Right now this just supports spinning stuff up in [Hetzner Cloud](https://www.hetzner.com/cloud),
 which is really cheap and minimal in features, or [Vultr](https://www.vultr.com/), which is not
-too cheap but will give you may give you some credits to spend on signup.
+too cheap but may give you some credits to spend on signup.
 The idea is to have a setup generic enough that could be recycled for many providers.
 
 ## How To
