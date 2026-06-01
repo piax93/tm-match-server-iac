@@ -38,3 +38,10 @@ mkdir -p Downloaded
 %{ for name, url in maps }
 curl -sSLf -o 'Downloaded/${name}.Map.Gbx' '${url}'
 %{ endfor ~}
+
+# download additional game mode scripts
+cd ../Scripts/Modes
+%{ for path, url in scripts }
+mkdir -p "$(dirname '${path}')"
+curl -sSLf -o '${path}' '${url}'
+%{ endfor ~}

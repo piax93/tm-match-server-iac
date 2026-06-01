@@ -6,6 +6,11 @@ variable "maps" {
   type        = map(string)
   description = "Name => download URL mapping of maps to load on servers"
 }
+variable "scripts" {
+  type        = map(string)
+  description = "Path => download URL mapping of additional gamemode scripts"
+  default     = {}
+}
 variable "dedi_login" {
   type        = string
   description = "Login name for dedicated server (https://www.trackmania.com/player/dedicated-servers)"
