@@ -31,6 +31,7 @@ module "bootstrap" {
   admins        = var.admins
   maps          = var.maps
   scripts       = var.scripts
+  plugins       = var.plugins
   dedi_login    = each.key
   dedi_password = each.value
   room_password = var.room_password

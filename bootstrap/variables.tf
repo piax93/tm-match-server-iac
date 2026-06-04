@@ -11,6 +11,11 @@ variable "scripts" {
   description = "Path => download URL mapping of additional gamemode scripts"
   default     = {}
 }
+variable "plugins" {
+  type        = map(string)
+  description = "Path => download URL mapping of additional Maniacontrol plugins"
+  default     = {}
+}
 variable "dedi_login" {
   type        = string
   description = "Login name for dedicated server (https://www.trackmania.com/player/dedicated-servers)"

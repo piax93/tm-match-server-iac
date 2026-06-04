@@ -12,6 +12,14 @@ curl -sSLf -o iac.zip https://github.com/piax93/tm-match-server-iac/archive/refs
 unzip iac.zip
 cd tm-*/server
 
+# download extra plugins for Maniacontrol
+pushd maniacontrol/extra_plugins
+%{ for path, url in plugins }
+mkdir -p "$(dirname '${path}')"
+curl -sSLf -o '${path}' '${url}'
+%{ endfor ~}
+popd
+
 # set all needed env vars
 export TM_MASTERSERVER_LOGIN='${dedi_login}'
 export TM_MASTERSERVER_PASSWORD='${dedi_password}'
@@ -45,3 +53,4 @@ cd ../Scripts/Modes
 mkdir -p "$(dirname '${path}')"
 curl -sSLf -o '${path}' '${url}'
 %{ endfor ~}
+unzip *.zip

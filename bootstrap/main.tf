@@ -6,6 +6,7 @@ output "bootstrap_script" {
       admins        = var.admins,
       maps          = var.maps,
       scripts       = var.scripts,
+      plugins       = var.plugins,
       dedi_login    = var.dedi_login,
       dedi_password = var.dedi_password,
       room_password = var.room_password,

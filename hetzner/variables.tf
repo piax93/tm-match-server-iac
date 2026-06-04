@@ -35,6 +35,11 @@ variable "scripts" {
   description = "Path => download URL mapping of additional gamemode scripts"
   default     = {}
 }
+variable "plugins" {
+  type        = map(string)
+  description = "Path => download URL mapping of additional Maniacontrol plugins"
+  default     = {}
+}
 variable "dedi_credentials" {
   type = list(object({
     login    = string

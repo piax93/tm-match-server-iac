@@ -23,6 +23,12 @@ RUN curl -sSLf -o /tmp/plugins.zip https://git.virtit.fr/beu/ManiacontrolPlugins
     && mv /tmp/maniacontrolplugins/MatchManagerSuite /maniacontrol/plugins/ \
     && rm -r /tmp/plugins.zip /tmp/maniacontrolplugins
 
+COPY extra_plugins /tmp/extra_plugins
+RUN  if compgen -G "/tmp/extra_plugins/*" > /dev/null; then \
+       cp -r /tmp/extra_plugins/* /maniacontrol/plugins/ \
+       && rm -r /tmp/extra_plugins; \
+     fi
+
 COPY server.xml.php /maniacontrol/configs/
 COPY --chmod=0755 run.sh /maniacontrol
 
